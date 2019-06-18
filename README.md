@@ -2,12 +2,16 @@
 
 ## 1.将axis文件夹移动到tomcat webapps目录
 ## 2.修改WEB-INF里的deploy.wsdd文件，增加以下内容
+
+```
  <service name="AdminService" provider="java:MSG">
   <namespace>http://xml.apache.org/axis/wsdd/</namespace>
   <parameter name="allowedMethods" value="AdminService"/>
   <parameter name="enableRemoteAdmin" value="true"/>
   <parameter name="className" value="org.apache.axis.utils.Admin"/>
  </service>
+ ```
+
 ## 3.在WEB-INF下执行以下命令，完成漏洞环境部署。
 
 ```
